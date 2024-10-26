@@ -34,4 +34,6 @@ export function loadMenu() {
 
     menu.appendChild(title);
     menu.appendChild(menuContentList);
+
+    contentDiv.appendChild(menu);
 };
