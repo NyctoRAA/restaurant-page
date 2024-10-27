@@ -1,7 +1,7 @@
 const contentDiv = document.querySelector("#content");
 
 export function loadMenu() {
-    div.innerHTML = "";
+    contentDiv.innerHTML = "";
 
     const menu = document.createElement("div");
     menu.id = "menuDiv";

@@ -4,13 +4,21 @@ const image = document.createElement("img");
 image.src = restaurantImage;
 
 const header = document.querySelector("header");
+
 const nav = document.querySelector("nav");
+
 const contentDiv = document.querySelector("#content");
+
 const button1 = document.createElement("button");
+button1.id = "button1";
 button1.innerHTML = "Home";
+
 const button2 = document.createElement("button");
+button2.id = "button2";
 button2.innerHTML = "Menu";
+
 const button3 = document.createElement("button");
+button3.id = "button3";
 button3.innerHTML = "Contact";
 
 export function pageLoad() {

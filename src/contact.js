@@ -1,7 +1,7 @@
 const contentDiv = document.querySelector("#content");
 
-export function loadConntact() {
-    div.innerHTML = "";
+export function loadContact() {
+    contentDiv.innerHTML = "";
 
     const contact = document.createElement("div");
     contact.id = "contactDiv";
