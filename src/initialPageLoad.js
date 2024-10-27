@@ -12,15 +12,15 @@ const contentDiv = document.querySelector("#content");
 
 const footer = document.querySelector("footer");
 
-export const button1 = document.createElement("button");
+const button1 = document.createElement("button");
 button1.id = "button1";
 button1.innerHTML = "Home";
 
-export const button2 = document.createElement("button");
+const button2 = document.createElement("button");
 button2.id = "button2";
 button2.innerHTML = "Menu";
 
-export const button3 = document.createElement("button");
+const button3 = document.createElement("button");
 button3.id = "button3";
 button3.innerHTML = "Contact";
 
