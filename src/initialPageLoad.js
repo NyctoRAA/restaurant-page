@@ -1,4 +1,7 @@
 import restaurantImage from "./restaurant.jpg";
+import { loadContact } from "./contact";
+import { loadHome } from "./home";
+import { loadMenu } from "./menu";
 
 const image = document.createElement("img");
 image.src = restaurantImage;
@@ -21,7 +24,7 @@ export const button3 = document.createElement("button");
 button3.id = "button3";
 button3.innerHTML = "Contact";
 
-export function pageLoad() {
+export function initialPageLoad() {
     nav.appendChild(button1);
     nav.appendChild(button2);
     nav.appendChild(button3);
@@ -36,4 +39,8 @@ export function pageLoad() {
 
     footer.appendChild(footerH1);
     footer.appendChild(footerContent);
+
+    button1.addEventListener("click", loadHome);
+    button2.addEventListener("click", loadContact);
+    button3.addEventListener("click", loadMenu);
 }
