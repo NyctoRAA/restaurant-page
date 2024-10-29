@@ -35,7 +35,7 @@ export function initialPageLoad() {
     footerH1.textContent = "FOGUETEIRO";
 
     const footerContent = document.createElement("p");
-    footerContent.textContent = "The portuguese traditional restaurant.";
+    footerContent.textContent = "The best portuguese traditional restaurant.";
 
     footer.appendChild(footerH1);
     footer.appendChild(footerContent);
