@@ -13,7 +13,7 @@ export function loadContact() {
     title2.innerHTML = "Phone: 961 321 965";
 
     const title3 = document.createElement("h3");
-    title3.innerHTML = "Rua 1 Dezembro";
+    title3.innerHTML = "Rua 1º Dezembro";
 
     contact.appendChild(title);
     contact.appendChild(title2);

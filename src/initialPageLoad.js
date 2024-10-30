@@ -41,6 +41,6 @@ export function initialPageLoad() {
     footer.appendChild(footerContent);
 
     button1.addEventListener("click", loadHome);
-    button2.addEventListener("click", loadContact);
-    button3.addEventListener("click", loadMenu);
+    button2.addEventListener("click", loadMenu);
+    button3.addEventListener("click", loadContact);
 }

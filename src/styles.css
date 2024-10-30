@@ -4,15 +4,18 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: #262A2B;
+    background-color: #181A1B;
+    overflow: hidden;
 }
 
-header, footer {
+header, footer, #contactDiv, #menuDiv {
     background-color: #262A2B;
 }
 
 header {
-    padding: 30px;
+    /* padding: 30px; */
+    height: 12vh;
+    display: flex;
 }
 
 nav {
@@ -37,13 +40,39 @@ button:hover {
     text-decoration: underline;
 }
 
+#content {
+    height: 76vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #contactDiv, #menuDiv {
-    background-color: #181A1B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 250px;
+    width: 350px;
+}
+
+#menuDiv h1, #contactDiv h1 {
+    font-size: 2rem;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    font-size: 1.2rem;
 }
 
 footer {
@@ -51,8 +80,34 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 12vh;
 }
 
 footer p {
     font-style: italic;
+}
+
+@media only screen and (max-width: 600px) {
+    #contactDiv, #menuDiv {
+        width: 200px;
+        height: 300px;
+    }
+
+    #contactDiv h1, #menuDiv h1 {
+        font-size: 1.6rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    #contactDiv h2, #contactDiv h3 {
+        font-size: 1rem;
+    }
+
+    footer h1 {
+        font-size: 1.1rem;
+        margin-bottom: 0px;
+    }
 }
