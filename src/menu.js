@@ -1,39 +1,57 @@
-const contentDiv = document.querySelector("#content");
+import feijoadaImg from "../images/feijoada.jpg";
+import francesinhaImg from "../images/francesinha.jpg";
+import tripasImg from "../images/tripas.jpg";
+
+const  contentDiv = document.querySelector("#content");
+
+function createMenuItem(dish) {
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const img = document.createElement("img");
+    img.src = dish.imgUrl;
+
+    const cardContent = document.createElement("div");
+    cardContent.id = "cardContent";
+
+    const title = document.createElement("h2");
+    title.textContent = dish.title;
+
+    const drescription = document.createElement("p");
+    drescription.textContent = dish.desc;
+
+    cardContent.append(title, drescription);
+
+    card.append(img, cardContent);
+
+    return card;
+};
 
 export function loadMenu() {
     contentDiv.innerHTML = "";
 
-    const menu = document.createElement("div");
-    menu.id = "menuDiv";
+    const dish1 = createMenuItem({
+        imgUrl: feijoadaImg,
+        title: "Feijoada",
+        desc: "A feijoada é um dos pratos mais tradicionais da gastronomia portuguesa. A riqueza de sabor das carnes e dos enchidos faz deste prato um prato inesquecível."
+    });
 
-    const title = document.createElement("h1");
-    title.innerHTML = "Menu of the day";
+    const dish2 = createMenuItem({
+        imgUrl: francesinhaImg,
+        title: "Francesinha",
+        desc: "Francesinha é uma sanduíche originária da cidade do Porto, em Portugal. A francesinha na sua variação sanduíche francesinha especial é constituída mais habitualmente por linguiça, salsicha fresca, fiambre, carnes frias e bife de carne de vaca, coberta com queijo posteriormente derretido."
+    });
 
-    const menuContentList = document.createElement("ul");
+    const dish3 = createMenuItem({
+        imgUrl: tripasImg,
+        title: "Tripas",
+        desc: "Tripas à moda do Porto é um prato tradicional nascido na cidade do Porto, e que, segundo uma lenda, remonta ao período dos Descobrimentos portugueses. O prato é confecionado com vários tipos de carne, tripas, enchidos e feijão branco."
+    });
 
-    const menuItem1 = document.createElement("li");
-    menuItem1.innerHTML = "Feijoada - 9€";
+    const cardContainer = document.createElement("div");
+    cardContainer.id = "cardContainer";
 
-    const menuItem2 = document.createElement("li");
-    menuItem2.innerHTML = "Tripas - 10€";
+    cardContainer.append(dish1, dish2, dish3);
 
-    const menuItem3 = document.createElement("li");
-    menuItem3.innerHTML = "Febras C/Batata - 8€";
-
-    const menuItem4 = document.createElement("li");
-    menuItem4.innerHTML = "Sardinha na brasa - 11€";
-
-    const menuItem5 = document.createElement("li");
-    menuItem5.innerHTML = "Francesinha - 13€";
-
-    menuContentList.appendChild(menuItem1);
-    menuContentList.appendChild(menuItem2);
-    menuContentList.appendChild(menuItem3);
-    menuContentList.appendChild(menuItem4);
-    menuContentList.appendChild(menuItem5);
-
-    menu.appendChild(title);
-    menu.appendChild(menuContentList);
-
-    contentDiv.appendChild(menu);
+    contentDiv.append(cardContainer);
 };

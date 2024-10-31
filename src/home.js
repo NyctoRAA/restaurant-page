@@ -1,4 +1,4 @@
-import restaurantImage from "./restaurant.jpg";
+import restaurantImage from "../images/restaurant.jpg";
 
 const contentDiv = document.querySelector("#content");
 

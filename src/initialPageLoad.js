@@ -1,4 +1,4 @@
-import restaurantImage from "./restaurant.jpg";
+import restaurantImage from "../images/restaurant.jpg";
 import { loadContact } from "./contact";
 import { loadHome } from "./home";
 import { loadMenu } from "./menu";
