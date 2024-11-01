@@ -1,11 +1,11 @@
 body {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     margin: 0;
     padding: 0;
     height: 100vh;
     background-color: #181A1B;
-    overflow: hidden;
+    overflow: auto;
 }
 
 header, footer, #contactDiv, #menuDiv {
@@ -40,7 +40,7 @@ button:hover {
 }
 
 #content {
-    height: 76vh;
+    min-height: 76vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,28 +48,36 @@ button:hover {
 
 #cardContainer {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
 }
 
 .card {
     display: flex;
+    width: 100%;
+    flex: 1;
     background-color: #262A2B;
-    /* flex: 1; */
-    /* min-width: 450px; */
+    border-radius: 15px;
+    transition: transform 0.4s ease;
 }
 
-.card img {
-    height: 100%;
-    min-width: 40%;
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card .cardImg {
+    height: auto;
+    width: 300px;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
 }
 
 #cardContent {
     padding: 20px;
 }
 
-#content img {
+#homeImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -111,6 +119,11 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
+    .card .cardImg {
+        border-radius: 15px 15px 0 0;
+        width: 200px;
+    }
+
     #contactDiv, #menuDiv {
         width: 200px;
         height: 300px;
@@ -134,8 +147,13 @@ footer p {
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    #cardContainer {
+
+@media only screen and (max-width: 400px) {
+    .card {
         flex-direction: column;
+    }
+
+    .card .cardImg {
+        width: 100%;
     }
 }

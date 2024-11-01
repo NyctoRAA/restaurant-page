@@ -5,6 +5,7 @@ import { loadMenu } from "./menu";
 
 const image = document.createElement("img");
 image.src = restaurantImage;
+image.id = "homeImg";
 
 const nav = document.querySelector("nav");
 

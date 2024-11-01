@@ -4,6 +4,7 @@ const contentDiv = document.querySelector("#content");
 
 const image = document.createElement("img");
 image.src = restaurantImage;
+image.id = "homeImg";
 
 export function loadHome() {
     contentDiv.innerHTML = "";

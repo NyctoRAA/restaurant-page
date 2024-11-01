@@ -10,6 +10,7 @@ function createMenuItem(dish) {
 
     const img = document.createElement("img");
     img.src = dish.imgUrl;
+    img.classList.add("cardImg");
 
     const cardContent = document.createElement("div");
     cardContent.id = "cardContent";
